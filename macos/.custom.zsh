@@ -28,3 +28,6 @@ function wm_libft() {
 export BAT_THEME=TwoDark
 
 alias norminette="find . -type f -name '*.h' -o -name '*.c' ! -name 'main.c' -exec norminette {} +"
+
+alias port-forward="~/Documents/Bash_Scripts/port-forward.sh"
+alias port-delete="~/Documents/Bash_Scripts/del-port-forward.sh"
