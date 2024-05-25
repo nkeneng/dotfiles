@@ -1,5 +1,8 @@
 # Setup fzf
 # ---------
+
+ eval "$(fzf --zsh)"
+
 if [[ ! "$PATH" == *$HOME/.fzf/bin* ]]; then
 	PATH="${PATH:+${PATH}:}$HOME/.fzf/bin"
 fi
