@@ -1,4 +1,4 @@
-export PATH="$PATH:/opt/nvim-linux64/bin"
+#export PATH="$PATH:/opt/nvim-linux64/bin"
 
 code() {
         docker stop 42
