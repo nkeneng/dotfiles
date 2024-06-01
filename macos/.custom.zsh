@@ -32,3 +32,7 @@ alias norminette="find . -type f -name '*.h' -o -name '*.c' ! -name 'main.c' -ex
 alias port-forward="~/Documents/Bash_Scripts/port-forward.sh"
 alias port-delete="~/Documents/Bash_Scripts/del-port-forward.sh"
 alias create-repo="~/Documents/Bash_Scripts/create-repository.sh"
+
+eval "$(gh copilot alias -- zsh)"
+
+source ~/.iterm2_shell_integration.zsh
