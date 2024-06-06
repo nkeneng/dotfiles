@@ -9,14 +9,13 @@ return {
     },
   },
   {
-    "pandark/42header.vim",
-	lazy = false,
-    keys = {
-      {
-        "<leader>^",
-        "<cmd>FortyTwoHeader<cr>",
-        desc = "Adds 42 Header",
-      },
-    },
-  },
+	"pbondoer/vim-42header",
+	   keys = {
+	     {
+	       "<leader>^",
+	       "<cmd>Stdheader<cr>",
+	       desc = "Adds 42 Header",
+	     },
+	   },
+	 },
 }

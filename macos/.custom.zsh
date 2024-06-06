@@ -36,3 +36,6 @@ alias create-repo="~/Documents/Bash_Scripts/create-repository.sh"
 eval "$(gh copilot alias -- zsh)"
 
 source ~/.iterm2_shell_integration.zsh
+
+export USER="snkeneng"
+export MAIL="snkeneng@student.42berlin.de"
