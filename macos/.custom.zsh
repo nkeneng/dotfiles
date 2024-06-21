@@ -39,3 +39,5 @@ source ~/.iterm2_shell_integration.zsh
 
 export USER="snkeneng"
 export MAIL="snkeneng@student.42berlin.de"
+
+export EDITOR=nvim
