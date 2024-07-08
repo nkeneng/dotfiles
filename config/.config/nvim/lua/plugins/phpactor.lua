@@ -8,6 +8,7 @@ return {
 		vim.keymap.set('n', '<Leader>pm', ':PhpactorContextMenu<CR>')
     	vim.keymap.set('n', '<Leader>pn', ':PhpactorClassNew<CR>')
     	vim.keymap.set('n', '<Leader>gd', ':PhpactorGotoDefinition<CR>')
+    	vim.keymap.set('n', '<Leader>em', ':PhpactorExtractMethod<CR>')
     end,
   }
 }

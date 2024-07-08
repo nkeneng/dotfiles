@@ -5,4 +5,4 @@
 --
 -- vim.keymap.set("n", "<leader>ig", ":lua require('telescope').extensions.live_grep_args.live_grep_args({ search_dirs = {vim.fn.getcwd()} })<CR>")
 vim.keymap.set("n", "<leader>fw", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
-
+vim.keymap.set("n", "<leader>ho", "<cmd>lua vim.lsp.buf.hover()<CR>")
