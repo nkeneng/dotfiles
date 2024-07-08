@@ -1,7 +1,8 @@
 return {
 	{
 		"hardyrafael17/norminette42.nvim",
-		lazy = false,
+		lazy = true,
+		ft = {'c', 'h'},
 		opts = {
 			runOnSave = true,
 			maxErrorsToShow = 5,
@@ -10,6 +11,7 @@ return {
 	},
 	{
 		"pbondoer/vim-42header",
+		ft = {'c', 'h'},
 		keys = {
 			{
 				"<leader>^",
