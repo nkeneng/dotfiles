@@ -7,4 +7,7 @@ vim.opt.shiftwidth = 4 -- Indents will have a width of 4
 vim.g.autoformat = false
 vim.opt.autowrite = false
 vim.opt.completeopt = ""
+vim.opt.mouse = ""
+vim.opt.scrolloff = 15
+vim.opt.splitright = true
 
