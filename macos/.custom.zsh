@@ -41,4 +41,4 @@ export USER="snkeneng"
 export MAIL="snkeneng@student.42berlin.de"
 
 export EDITOR=nvim
-alias obs="cd '/Users/stevennkeneng/Library/Mobile Documents/iCloud~md~obsidian/Documents/Coding journey'"
+alias obs="cd '/Users/stevennkeneng/Library/Mobile Documents/iCloud~md~obsidian/Documents/Coding journey' && nvim ."
