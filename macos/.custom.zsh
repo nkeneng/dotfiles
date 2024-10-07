@@ -60,7 +60,7 @@ function nvims() {
   NVIM_APPNAME=$config nvim $@
 }
 
-# bindkey -s ^a "nvims\n"
+bindkey -s ^a "nvims\n"
 
 alias bashly='docker run --rm -it --user $(id -u):$(id -g) --volume "$PWD:/app" dannyben/bashly'
 
