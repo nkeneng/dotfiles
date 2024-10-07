@@ -2,3 +2,4 @@ config/.config/*
 !config/.config/nvim
 !config/.config/yazi
 !config/.config/atuin
+!config/.config/nix

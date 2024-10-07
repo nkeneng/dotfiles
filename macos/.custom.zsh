@@ -3,6 +3,8 @@
 eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
 
+set -o vi
+
 alias cdl='zoxide query -l -s | less'
 alias cd=z
 
