@@ -23,8 +23,15 @@ description = "Nix configuration for my macOS system.";
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
       environment.systemPackages =
-        [ pkgs.vim
+        [ 
+			pkgs.vim
+			pkgs.cloudflared
+			pkgs.pass
         ];
+
+		  fonts.packages = [
+		# (pkgs.nerdfonts.override { fonts = [ "Chalkboard SE" ]; })
+		  ];
 
 	   homebrew = {
 		enable = true;

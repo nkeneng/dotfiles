@@ -28,10 +28,16 @@ config.keys = {
     mods = 'CMD',
     action = wezterm.action.CloseCurrentPane { confirm = false },
   },
+  {
+    key = 'k',
+    mods = 'CMD',
+    action = wezterm.action.ClearScrollback 'ScrollbackAndViewport',
+  },
 }
 
 
 config.font = wezterm.font("JetbrainsMono Nerd Font")
+-- config.font = wezterm.font("Chalkboard SE Nerd Font")
 config.font_size = 19
 
 config.enable_tab_bar = false
