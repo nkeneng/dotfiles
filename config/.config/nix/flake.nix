@@ -27,6 +27,7 @@ description = "Nix configuration for my macOS system.";
 			pkgs.vim
 			pkgs.cloudflared
 			pkgs.pass
+			pkgs.nushell
         ];
 
 		  fonts.packages = [
@@ -37,6 +38,8 @@ description = "Nix configuration for my macOS system.";
 		enable = true;
 		brews = [
 			"mas"
+			"yarn"
+			"koekeishiya/formulae/skhd"
 		];
 		casks = [
 			"iina"

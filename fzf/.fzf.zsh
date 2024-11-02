@@ -1,7 +1,7 @@
 # Setup fzf
 # ---------
 
- eval "$(fzf --zsh)"
+eval "$(fzf --zsh)"
 
 if [[ ! "$PATH" == *$HOME/.fzf/bin* ]]; then
 	PATH="${PATH:+${PATH}:}$HOME/.fzf/bin"
@@ -14,6 +14,8 @@ export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
+
+alias fvim="fzf --bind 'enter:become(nvim {})'"
 
 # Use fd (https://github.com/sharkdp/fd) for listing path candidates.
 # - The first argument to the function ($1) is the base path to start traversal
