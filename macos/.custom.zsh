@@ -12,7 +12,7 @@ if [[ ! "$PATH" == *$HOME/.local/bin* ]]; then
 	PATH="${PATH:+${PATH}:}$HOME/.local/bin"
 fi
 
-alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+# alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 
 alias para="prlctl"
 alias ubuntu="ssh ubuntu"

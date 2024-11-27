@@ -28,6 +28,7 @@ description = "Nix configuration for my macOS system.";
 			pkgs.cloudflared
 			pkgs.pass
 			pkgs.nushell
+			pkgs.conda
         ];
 
 		  fonts.packages = [
