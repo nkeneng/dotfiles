@@ -14,9 +14,6 @@ fi
 
 # alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 
-alias para="prlctl"
-alias ubuntu="ssh ubuntu"
-
 export OLLAMA_ORIGINS="app://obsidian.md*,chrome-extension://*"
 
 export PATH=$PATH:/Users/stevennkeneng/Library/Python/3.9/bin
