@@ -1,6 +1,6 @@
-[submodule "config/.config/yazi/flavors"]
-	path = config/.config/yazi/flavors
+[submodule "config/yazi/flavors"]
+	path = config/yazi/flavors
 	url = https://github.com/yazi-rs/flavors.git
-[submodule "config/.config/nvim"]
-	path = config/.config/nvim
+[submodule "config/nvim"]
+	path = config/nvim
 	url = https://github.com/nkeneng/nvim.git
