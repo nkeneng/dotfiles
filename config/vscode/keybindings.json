@@ -225,8 +225,4 @@
         "key": "cmd+3",
         "command": "-workbench.action.focusThirdEditorGroup"
     },
-    {
-        "key": "cmd+3",
-        "command": "workbench.view.extension.github-cweijan-mysql"
-    },
 ]

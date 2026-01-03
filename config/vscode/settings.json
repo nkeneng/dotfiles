@@ -182,5 +182,6 @@
   "chat.mcp.gallery.enabled": true,
   "nix.enableLanguageServer": true,
   "nix.serverPath": "nil",
-  "githubLocalActions.dockerDesktopPath": "/Applications/Docker.app"
+  "githubLocalActions.dockerDesktopPath": "/Applications/Docker.app",
+  "nix.formatterPath": "nixfmt"
 }
