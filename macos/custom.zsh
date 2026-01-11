@@ -5,8 +5,8 @@ eval "$(fzf --zsh)"
 
 set -o vi
 
-alias cdl='zoxide query -l -s | less'
-alias cd=z
+# alias cdl='zoxide query -l -s | less'
+#alias cd=z
 
 if [[ ! "$PATH" == *$HOME/.local/bin* ]]; then
 	PATH="${PATH:+${PATH}:}$HOME/.local/bin"
