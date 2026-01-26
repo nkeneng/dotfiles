@@ -2,3 +2,4 @@ theme = Github Dark
 font-size = 15
 font-family = 'ComicShannsMono Nerd Font''
 #font-family = 'JetBrains Mono Nerd Font'
+keybind = global:cmd+arrow_up=toggle_quick_terminal
