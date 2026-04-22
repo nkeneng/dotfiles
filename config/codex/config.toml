@@ -1,25 +1,54 @@
+model = "gpt-5.4"
+model_reasoning_effort = "medium"
+approvals_reviewer = "user"
+
 [mcp_servers.context7]
 command = "npx"
 args = ["-y", "@upstash/context7-mcp"]
 
 [mcp_servers.n8n-mcp]
 command = "infisical"
-args = [
-  "run",
-  "--env=dev",
-  "--projectId=e0b2ef20-030d-4b67-a20a-073bd3b2945f",
-  "--path=/MCP",
-  "--",
-  "docker",
-  "run",
-  "-i",
-  "--rm",
-  "--init",
-  "-e", "MCP_MODE=stdio",
-  "-e", "LOG_LEVEL=error",
-  "-e", "DISABLE_CONSOLE_OUTPUT=true",
-  "-e", "N8N_API_URL",
-  "-e", "N8N_API_KEY",
-  "ghcr.io/czlonkowski/n8n-mcp:latest"
-]
+args = ["run", "--env=dev", "--projectId=e0b2ef20-030d-4b67-a20a-073bd3b2945f", "--path=/MCP", "--", "docker", "run", "-i", "--rm", "--init", "-e", "MCP_MODE=stdio", "-e", "LOG_LEVEL=error", "-e", "DISABLE_CONSOLE_OUTPUT=true", "-e", "N8N_API_URL", "-e", "N8N_API_KEY", "ghcr.io/czlonkowski/n8n-mcp:latest"]
 
+[mcp_servers.chrome-devtools]
+command = "npx"
+args = ["-y", "chrome-devtools-mcp@latest", "--autoConnect"]
+
+[mcp_servers.openaiDeveloperDocs]
+url = "https://developers.openai.com/mcp"
+
+[projects."/Users/stevennkeneng/Downloads/test-gemma-codex"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/nix-config"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Website/shop_spark/decathlon-scraper/decathlon-shopware-offline"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Website/others/youtube-rag"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-04-18-create-me-a-small-app-that/codex-task-runner"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-04-21-how-do-i-install-a-custom"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-04-21-claude-launched-a-claude-remote-to"]
+trust_level = "trusted"
+
+[notice.model_migrations]
+"gpt-5.3-codex" = "gpt-5.4"
+
+[plugins."build-macos-apps@openai-curated"]
+enabled = true
+
+[plugins."build-web-apps@openai-curated"]
+enabled = true
+
+[plugins."diagram-design@local"]
+enabled = true

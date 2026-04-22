@@ -1,4 +1,5 @@
-theme = Github Dark
+#theme = Github Dark
+theme = dark:Catppuccin Frappe,light:Dawnfox
 font-size = 15
 font-family = 'ComicShannsMono Nerd Font''
 #font-family = 'JetBrains Mono Nerd Font'
