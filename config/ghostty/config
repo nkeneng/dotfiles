@@ -1,6 +1,8 @@
 #theme = Github Dark
-theme = dark:Catppuccin Frappe,light:Dawnfox
+#theme = dark:Catppuccin Frappe,light:Dawnfox
+theme = dark:Darkside,light:Dawnfox
 font-size = 15
 font-family = 'ComicShannsMono Nerd Font''
 #font-family = 'JetBrains Mono Nerd Font'
 keybind = global:cmd+arrow_up=toggle_quick_terminal
+macos-option-as-alt = true
