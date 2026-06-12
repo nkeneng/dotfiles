@@ -12,6 +12,24 @@ eval "$(fzf --zsh)"
 
 set -o vi
 
+# MQL4 compiler via Wine MetaEditor
+mql-compile() {
+  local file="${1:?Usage: mql-compile <file.mq4>}"
+  local abs_path="$(cd "$(dirname "$file")" && pwd)/$(basename "$file")"
+  local win_path="Z:${abs_path//\//\\}"
+  WINEPREFIX="$HOME/Library/Application Support/net.metaquotes.wine.metatrader4" \
+    "/Applications/MetaTrader 4.app/Contents/SharedSupport/wine/bin/wine64" \
+    "C:\Program Files (x86)\MetaTrader 4\metaeditor.exe" \
+    /compile:"$win_path" /log 2>/dev/null
+  local log_file="${abs_path%.mq4}.log"
+  if [ -f "$log_file" ]; then
+    local result
+    result="$(iconv -f UTF-16LE -t UTF-8 "$log_file" 2>/dev/null | tail -1)"
+    echo "$result"
+    [[ "$result" == *"0 error"* ]]
+  fi
+}
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
