@@ -1,14 +1,14 @@
-model = "gpt-5.4"
+model = "gpt-5.5"
 model_reasoning_effort = "medium"
 approvals_reviewer = "user"
+approval_policy = "never"
+sandbox_mode = "danger-full-access"
+
+notify = ["/Users/stevennkeneng/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
 
 [mcp_servers.context7]
 command = "npx"
 args = ["-y", "@upstash/context7-mcp"]
-
-[mcp_servers.n8n-mcp]
-command = "infisical"
-args = ["run", "--env=dev", "--projectId=e0b2ef20-030d-4b67-a20a-073bd3b2945f", "--path=/MCP", "--", "docker", "run", "-i", "--rm", "--init", "-e", "MCP_MODE=stdio", "-e", "LOG_LEVEL=error", "-e", "DISABLE_CONSOLE_OUTPUT=true", "-e", "N8N_API_URL", "-e", "N8N_API_KEY", "ghcr.io/czlonkowski/n8n-mcp:latest"]
 
 [mcp_servers.chrome-devtools]
 command = "npx"
@@ -17,8 +17,26 @@ args = ["-y", "chrome-devtools-mcp@latest", "--autoConnect"]
 [mcp_servers.openaiDeveloperDocs]
 url = "https://developers.openai.com/mcp"
 
-[projects."/Users/stevennkeneng/Downloads/test-gemma-codex"]
-trust_level = "trusted"
+[mcp_servers.n8n]
+url = "https://n8n.stevenshomelab.com/mcp-server/http"
+
+[mcp_servers.node_repl]
+args = []
+command = "/Applications/Codex.app/Contents/Resources/cua_node/bin/node_repl"
+startup_timeout_sec = 120
+
+[mcp_servers.node_repl.env]
+NODE_REPL_NATIVE_PIPE_CONNECT_TIMEOUT_MS = "1000"
+NODE_REPL_NODE_MODULE_DIRS = "/Applications/Codex.app/Contents/Resources/cua_node/lib/node_modules"
+NODE_REPL_NODE_PATH = "/Applications/Codex.app/Contents/Resources/cua_node/bin/node"
+NODE_REPL_TRUSTED_CODE_PATHS = "/Users/stevennkeneng/.codex"
+CODEX_HOME = "/Users/stevennkeneng/.codex"
+NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "a3f3ca79fe2bff56076b895f1f13a8f673168160bd79d880cc34b4500e08a71c"
+BROWSER_USE_AVAILABLE_BACKENDS = "iab"
+NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = "Control the in-app browser in conjunction with the Browser Plugin."
+BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
+BROWSER_USE_CODEX_APP_VERSION = "26.609.30741"
+CODEX_CLI_PATH = "/Applications/Codex.app/Contents/Resources/codex"
 
 [projects."/Users/stevennkeneng/nix-config"]
 trust_level = "trusted"
@@ -41,6 +59,84 @@ trust_level = "trusted"
 [projects."/Users/stevennkeneng/Documents/Codex/2026-04-21-claude-launched-a-claude-remote-to"]
 trust_level = "trusted"
 
+[projects."/Users/stevennkeneng/Documents/Codex/2026-04-22-plugin-creator-users-stevennkeneng-codex-skills"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Downloads/FelOAIAssistantsManager"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-04-24/files-mentioned-by-the-user-deep"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Apps/Readwise-Os"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-04-26/create-me-a-small-webapp-that"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-04-26/ouvre-safari-et-montre-moi-la"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Website/ChannelChat"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Website/others/trading/FinRL"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-04-30/skill-installer-users-stevennkeneng-codex-skills"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/.codex"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-04-30/peux-tu-recuperer-le-transcript-de"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-05-01/i-have-this-code-in-an"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-05-01/import-re-def-extract-youtube-video"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-05-01/using-the-n8n-mcp-and-only"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Downloads/latex-export"]
+trust_level = "trusted"
+
+[projects."/"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Website/ChannelChat-Ui"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-05-10/how-can-i-edit-the-claude"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-05-14/find-me-this-song-on-apple"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-05-24/can-you-control-my-mac-like"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-05-26/use-computer-use-to-play-some"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-05-26/files-mentioned-by-the-user-mmayer"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-05-30/ordinateur-plugin-computer-use-openai-bundled"]
+trust_level = "trusted"
+
+[projects."/Volumes/Users/nkene/AppData/Roaming/MetaQuotes/Terminal/50CA3DFB510CC5A8F28B48D1BF2A5702/MQL4/Indicators/TC"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-06-12/ordinateur-plugin-computer-use-openai-bundled"]
+trust_level = "trusted"
+
 [notice.model_migrations]
 "gpt-5.3-codex" = "gpt-5.4"
 
@@ -52,3 +148,86 @@ enabled = true
 
 [plugins."diagram-design@local"]
 enabled = true
+
+[plugins."github@openai-curated"]
+enabled = true
+
+[plugins."agentic-baseline@local"]
+enabled = true
+
+[plugins."superpowers@openai-curated"]
+enabled = true
+
+[plugins."documents@openai-primary-runtime"]
+enabled = true
+
+[plugins."spreadsheets@openai-primary-runtime"]
+enabled = true
+
+[plugins."presentations@openai-primary-runtime"]
+enabled = true
+
+[plugins."browser@openai-bundled"]
+enabled = true
+
+[marketplaces.openai-bundled]
+last_updated = "2026-06-12T12:12:48Z"
+source_type = "local"
+source = "/Users/stevennkeneng/.codex/.tmp/bundled-marketplaces/openai-bundled"
+
+[marketplaces.openai-primary-runtime]
+last_updated = "2026-06-02T18:05:52Z"
+source_type = "local"
+source = "/Users/stevennkeneng/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
+
+[[skills.config]]
+path = "/Users/stevennkeneng/.codex/skills/n8n-expression-syntax/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/stevennkeneng/.codex/skills/n8n-node-configuration/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/stevennkeneng/.codex/skills/n8n-workflow-patterns/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/stevennkeneng/.codex/skills/n8n-code-python/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/stevennkeneng/.codex/skills/n8n-mcp-tools-expert/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/stevennkeneng/.codex/skills/n8n-validation-expert/SKILL.md"
+enabled = false
+
+[desktop]
+appearanceLightCodeThemeId = "raycast"
+usePointerCursors = true
+preventSleepWhileRunning = true
+keepRemoteControlAwakeWhilePluggedIn = true
+
+[desktop.appearanceLightChromeTheme]
+accent = "#ff6363"
+contrast = 45
+ink = "#030303"
+opaqueWindows = false
+surface = "#ffffff"
+
+[desktop.appearanceLightChromeTheme.fonts]
+code = '"Jetbrains Mono"'
+ui = "Inter"
+
+[desktop.appearanceLightChromeTheme.semanticColors]
+diffAdded = "#006b4f"
+diffRemoved = "#b12424"
+skill = "#9a1b6e"
+
+[desktop.open-in-target-preferences]
+global = "zed"
+
+[features]
+js_repl = false
