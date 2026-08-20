@@ -184,5 +184,7 @@
   "nix.formatterPath": "nixfmt",
   "chat.tools.terminal.outputLocation": "chat",
   "editor.minimap.enabled": false,
-  "workbench.colorTheme": "Light 2026"
+  "workbench.colorTheme": "Light 2026",
+  "git.blame.editorDecoration.enabled": true,
+  "git.blame.statusBarItem.enabled": true
 }

@@ -1,4 +1,4 @@
-model = "gpt-5.5"
+model = "gpt-5.6-sol"
 model_reasoning_effort = "medium"
 approvals_reviewer = "user"
 approval_policy = "never"
@@ -22,21 +22,30 @@ url = "https://n8n.stevenshomelab.com/mcp-server/http"
 
 [mcp_servers.node_repl]
 args = []
-command = "/Applications/Codex.app/Contents/Resources/cua_node/bin/node_repl"
+command = "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl"
 startup_timeout_sec = 120
 
 [mcp_servers.node_repl.env]
 NODE_REPL_NATIVE_PIPE_CONNECT_TIMEOUT_MS = "1000"
-NODE_REPL_NODE_MODULE_DIRS = "/Applications/Codex.app/Contents/Resources/cua_node/lib/node_modules"
-NODE_REPL_NODE_PATH = "/Applications/Codex.app/Contents/Resources/cua_node/bin/node"
-NODE_REPL_TRUSTED_CODE_PATHS = "/Users/stevennkeneng/.codex"
+NODE_REPL_NODE_MODULE_DIRS = "/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules"
+NODE_REPL_NODE_PATH = "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node"
+NODE_REPL_TRUSTED_CODE_PATHS = "/Users/stevennkeneng/.codex:/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules"
 CODEX_HOME = "/Users/stevennkeneng/.codex"
-NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "a3f3ca79fe2bff56076b895f1f13a8f673168160bd79d880cc34b4500e08a71c"
-BROWSER_USE_AVAILABLE_BACKENDS = "iab"
+NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "7fe0e1c59da4bc68f9d6ab81ae8d349b53fee44b074f49be0effbc1105a5f1d3"
+BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
 NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = "Control the in-app browser in conjunction with the Browser Plugin."
+NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = "Control the Chrome browser in conjunction with the Chrome Plugin. Prefer this method of controlling Chrome over alternatives (such as Computer Use) unless the user explicitly mentions an alternative."
+NODE_REPL_INSTRUCTIONS_USE_CASE_COMPUTER_USE = "Control desktop apps on macOS through Computer Use."
 BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
-BROWSER_USE_CODEX_APP_VERSION = "26.609.30741"
-CODEX_CLI_PATH = "/Applications/Codex.app/Contents/Resources/codex"
+BROWSER_USE_CODEX_APP_VERSION = "26.810.41047"
+SKY_CUA_SERVICE_PATH = "/Users/stevennkeneng/.codex/computer-use/Codex Computer Use.app"
+CODEX_CLI_PATH = "/Applications/ChatGPT.app/Contents/Resources/codex"
+
+[mcp_servers.computer-use]
+command = "./Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient"
+args = ["mcp"]
+cwd = "."
+enabled = false
 
 [projects."/Users/stevennkeneng/nix-config"]
 trust_level = "trusted"
@@ -137,6 +146,96 @@ trust_level = "trusted"
 [projects."/Users/stevennkeneng/Documents/Codex/2026-06-12/ordinateur-plugin-computer-use-openai-bundled"]
 trust_level = "trusted"
 
+[projects."/Users/stevennkeneng/Documents/Codex/2026-06-18/j"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Website/Lumaread"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-07-02/je-veux-une-app-ios-qui"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-07-06/https-ki-campus-org-lernangebote-format"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-07-11/je"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-07-11/j"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-07-11/voi"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-07-11/voici-ma-table-de-ping-pong"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-07-15/je"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-07-16/je"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-07-17/u"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-07-17/so"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-07-20/en"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-07-23/yeah"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-07-23/yeah-2"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-07-23/yeah-3"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-07-23/yeah-4"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-07-24/realtime-voice-chat"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-07-24/realtime-voice-chat-2"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-07-24/realtime-voice-chat-3"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-07-24/realtime-voice-chat-4"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-07-24/realtime-voice-chat-5"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-07-24/realtime-voice-chat-6"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-07-24/realtime-voice-chat-7"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-07-24/realtime-voice-chat-8"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-07-24/realtime-voice-chat-9"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-08-08/using-ordinateur-plugin-computer-use-openai"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-08-17/as-tu-connaissance-de-tous-les"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-08-17/we-are-now-building-the-next"]
+trust_level = "trusted"
+
+[projects."/Users/stevennkeneng/Documents/Codex/2026-08-17/run-the-gh-auth-and-give"]
+trust_level = "trusted"
+
 [notice.model_migrations]
 "gpt-5.3-codex" = "gpt-5.4"
 
@@ -167,18 +266,44 @@ enabled = true
 [plugins."presentations@openai-primary-runtime"]
 enabled = true
 
+[plugins."pdf@openai-primary-runtime"]
+enabled = true
+
+[plugins."template-creator@openai-primary-runtime"]
+enabled = true
+
+[plugins."visualize@openai-bundled"]
+enabled = true
+
+[plugins."agentic-core@personal"]
+enabled = true
+
+[plugins."team-delivery@personal"]
+enabled = true
+
+[plugins."sites@openai-bundled"]
+enabled = true
+
 [plugins."browser@openai-bundled"]
 enabled = true
 
+[plugins."computer-use@openai-bundled"]
+enabled = true
+
 [marketplaces.openai-bundled]
-last_updated = "2026-06-12T12:12:48Z"
+last_updated = "2026-08-18T11:41:16Z"
 source_type = "local"
 source = "/Users/stevennkeneng/.codex/.tmp/bundled-marketplaces/openai-bundled"
 
 [marketplaces.openai-primary-runtime]
-last_updated = "2026-06-02T18:05:52Z"
+last_updated = "2026-08-19T01:06:29Z"
 source_type = "local"
 source = "/Users/stevennkeneng/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
+
+[marketplaces.personal]
+last_updated = "2026-07-24T12:29:53Z"
+source_type = "local"
+source = "/Users/stevennkeneng/Documents/Website/ChannelChat/.agentic/marketplace"
 
 [[skills.config]]
 path = "/Users/stevennkeneng/.codex/skills/n8n-expression-syntax/SKILL.md"
@@ -205,29 +330,39 @@ path = "/Users/stevennkeneng/.codex/skills/n8n-validation-expert/SKILL.md"
 enabled = false
 
 [desktop]
-appearanceLightCodeThemeId = "raycast"
+appearanceLightCodeThemeId = "one"
 usePointerCursors = true
 preventSleepWhileRunning = true
 keepRemoteControlAwakeWhilePluggedIn = true
+followUpQueueMode = "queue"
+dock-icon-preference = "codex-system"
+conversationDetailMode = "STEPS_COMMANDS"
+dictationDictionary = []
+realtimeVoiceScreenContextEnabled = true
+localeOverride = "fr-FR"
 
 [desktop.appearanceLightChromeTheme]
-accent = "#ff6363"
+accent = "#526fff"
 contrast = 45
-ink = "#030303"
-opaqueWindows = false
-surface = "#ffffff"
+ink = "#383a42"
+opaqueWindows = true
+surface = "#fafafa"
 
 [desktop.appearanceLightChromeTheme.fonts]
-code = '"Jetbrains Mono"'
-ui = "Inter"
 
 [desktop.appearanceLightChromeTheme.semanticColors]
-diffAdded = "#006b4f"
-diffRemoved = "#b12424"
-skill = "#9a1b6e"
+diffAdded = "#3bba54"
+diffRemoved = "#e45649"
+skill = "#526fff"
 
 [desktop.open-in-target-preferences]
 global = "zed"
 
 [features]
+hooks = true
 js_repl = false
+
+[shell_environment_policy.set]
+BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
+NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "7fe0e1c59da4bc68f9d6ab81ae8d349b53fee44b074f49be0effbc1105a5f1d3"
+NODE_REPL_TRUSTED_CODE_PATHS = "/Users/stevennkeneng/.codex:/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules"
