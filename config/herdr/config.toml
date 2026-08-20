@@ -1,0 +1,52 @@
+onboarding = false
+# Migre depuis config/tmux/tmux.conf.
+# Seules les options ayant un equivalent reel dans herdr 0.8.0 sont reprises.
+# Valide avec `herdr config check`.
+
+[keys]
+# tmux: set -g prefix C-a / unbind C-b
+# Appuyer deux fois sur le prefix l'envoie a l'application (equivalent de
+# `bind C-a send-prefix`), c'est natif et ne demande aucun binding.
+prefix = "ctrl+a"
+
+# tmux: bind '"' split-window -v  -> nouveau pane en dessous
+# Attention, herdr nomme ses splits d'apres l'orientation du separateur,
+# donc l'inverse de tmux : "horizontal" = pane en dessous.
+split_horizontal = "prefix+\""
+
+# tmux: bind % split-window -h  -> nouveau pane a droite
+split_vertical = "prefix+%"
+
+# tmux: unbind r / bind r source-file
+# prefix+r est deja le mode resize chez herdr, d'ou le decalage sur shift+r.
+reload_config = "prefix+shift+r"
+
+# tmux: prefix + fleches -> select-pane (binding par defaut de tmux).
+# On garde les defauts h/j/k/l de herdr et on ajoute les fleches a cote.
+focus_pane_left = ["prefix+h", "prefix+left"]
+focus_pane_down = ["prefix+j", "prefix+down"]
+focus_pane_up = ["prefix+k", "prefix+up"]
+focus_pane_right = ["prefix+l", "prefix+right"]
+
+[ui]
+# tmux: set -g mouse on
+mouse_capture = true
+
+[theme]
+# tmux: @catppuccin_flavor "mocha" (herdr n'expose pas les variantes)
+name = "catppuccin"
+
+[ui.toast]
+delivery = "herdr"
+
+# tmux: plugin omerxx/tmux-floax (fenetre flottante).
+# herdr n'a aucune action popup integree : elle n'existe qu'en la declarant ici.
+# floax utilisait prefix+p, mais prefix+p est deja previous_tab chez herdr,
+# d'ou le choix de prefix+f (libre) pour ne rien deplacer.
+[[keys.command]]
+key = "prefix+f"
+type = "popup"
+command = "exec \"${SHELL:-sh}\""
+description = "shell flottant (exit ou ctrl+d pour fermer)"
+width = "80%"
+height = "80%"
